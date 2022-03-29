@@ -1,0 +1,23 @@
+<div class="container">
+    <ng-container *ngIf="isLoading$ | async; then loadingSpinner; else loginFormWrapper"> </ng-container>
+    <ng-template #loadingSpinner>
+        <svg-icon src="./assets/icons/loading-spinner.svg" [svgStyle]="{ 'width.px': '80', 'height.px': '80' }" class="loading"> </svg-icon>
+    </ng-template>
+    <ng-template #loginFormWrapper>
+        <div class="content">
+            <form class="signin-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <p class="page-title">Sign in</p>
+                <div class="input-wrapper">
+                    <label class="title"
+                        >Email address<input type="text" formControlName="email" placeholder="username" class="username" />
+                    </label>
+                </div>
+                <div class="input-wrapper">
+                    <label class="title">Password<input type="password" formControlName="password" placeholder="••••••••••" /></label>
+                </div>
+                <button class="common-button" type="submit" [disabled]="!form.valid">Sign In</button>
+            </form>
+        </div>
+        <p class="switch-to-register" [routerLink]="['/register']">Don't have an account yet? <span>Create one here.</span></p>
+    </ng-template>
+</div>

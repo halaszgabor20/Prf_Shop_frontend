@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="content">
+        <p (click)="navigateTo('/home/products')">MyShop</p>
+        <div class="actions">
+            <p (click)="navigateTo('/home/products')">Products</p>
+            <p class="counter-wrapper" (click)="navigateTo('/home/cart')">
+                Cart
+                <span class="counter" *ngIf="cart.length">
+                    {{ cart.length }}
+                </span>
+            </p>
+            <p (click)="logout()">Logout</p>
+        </div>
+    </div>
+</div>

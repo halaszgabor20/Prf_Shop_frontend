@@ -1,0 +1,104 @@
+.container {
+    background: #171820;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .logo-container {
+        max-width: 860pt;
+        min-width: 512pt;
+        height: 64pt;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            height: 24pt;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 24pt;
+            width: 100%;
+            .page-title {
+                font-weight: bold;
+                font-size: 26px;
+                color: #ffffff;
+                align-self: flex-start;
+                margin-bottom: 36pt;
+            }
+            .input-wrapper {
+                margin-bottom: 16pt;
+                .title {
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: white;
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    input {
+                        display: block;
+                        height: 28pt;
+                        width: 200pt;
+                        max-width: 100%;
+                        background-color: white;
+                        outline: none;
+                        box-sizing: border-box;
+                        border: none;
+                        padding: 0pt 0pt 0pt 10pt;
+                        line-height: 28pt;
+                        font-size: 13px;
+                        color: black;
+                        font-weight: 600;
+                        font-family: "Poppins", sans-serif;
+                        border-radius: 6pt;
+                        margin-top: 4pt;
+                    }
+                    .username {
+                        padding-right: 40pt;
+                    }
+                }
+            }
+            button {
+                margin: 16pt 0pt;
+                height: 28pt;
+            }
+        }
+    }
+    .switch-to-login {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        color: #aaaaaa;
+        outline: none;
+        cursor: pointer;
+        span {
+            color: white;
+        }
+    }
+    .loading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+    }
+}

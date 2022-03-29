@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="content">
+        <p class="title">Available Products</p>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quality</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Add to Cart</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products$ | async">
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.quality }}</td>
+                        <td>{{ product.quantity }} db</td>
+                        <td>{{ product.price }} Ft</td>
+                        <td class="button-wrapper"><p class="add-button" (click)="addToCart(product._id)">+</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
